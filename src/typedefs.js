@@ -1,4 +1,4 @@
-const gql = require('graphql-tag')
+const gql = require("graphql-tag");
 
 module.exports = gql`
   enum Theme {
@@ -92,6 +92,10 @@ module.exports = gql`
     feed: [Post]!
   }
 
+  type Subscription {
+    newPost: Post!
+  }
+
   type Mutation {
     updateSettings(input: UpdateSettingsInput!): Settings!
     createPost(input: NewPostInput!): Post!
@@ -100,5 +104,4 @@ module.exports = gql`
     signup(input: SignupInput!): AuthUser!
     signin(input: SigninInput!): AuthUser!
   }
-
-`
+`;

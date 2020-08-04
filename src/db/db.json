@@ -17,8 +17,24 @@
       "avatar": "http",
       "createdAt": 1596552757921,
       "id": "Vs8hGOFoLcXmuW2IVDuvg"
+    },
+    {
+      "email": "member2@gmail.com",
+      "password": "123",
+      "role": "MEMBER",
+      "verified": false,
+      "avatar": "http",
+      "createdAt": 1596561509254,
+      "id": "pAO_YrhLL4go7Dv2o3YNf"
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "message": "hello there",
+      "author": "pAO_YrhLL4go7Dv2o3YNf",
+      "createdAt": 1596561874457,
+      "id": "v489pb-IPTMg3WfZwmMtb"
+    }
+  ],
   "settings": []
 }
