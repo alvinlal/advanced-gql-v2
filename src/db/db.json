@@ -1,13 +1,22 @@
 {
   "users": [
     {
-      "email": "member@member.com",
-      "password": "password",
+      "email": "admin@gmail.com",
+      "password": "123",
       "role": "ADMIN",
       "verified": false,
       "avatar": "http",
-      "createdAt": 1571213104370,
-      "id": "Z2hlvDmLOSRZGebC_Z_aA"
+      "createdAt": 1596552713126,
+      "id": "QtfN7GU-DkcAkNuWkVdRI"
+    },
+    {
+      "email": "member@gmail.com",
+      "password": "123",
+      "role": "MEMBER",
+      "verified": false,
+      "avatar": "http",
+      "createdAt": 1596552757921,
+      "id": "Vs8hGOFoLcXmuW2IVDuvg"
     }
   ],
   "posts": [],
