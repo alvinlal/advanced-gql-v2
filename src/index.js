@@ -8,6 +8,7 @@ const {
   AuthorizationDirective,
   AuthenticationDirective,
 } = require("./directives");
+const { FormatDateDirective } = require("./directives");
 
 const server = new ApolloServer({
   typeDefs,
@@ -36,5 +37,5 @@ const server = new ApolloServer({
 });
 
 server.listen(4000).then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`);
+  console.log(`🚀 Server is ready at ${url}`);
 });
