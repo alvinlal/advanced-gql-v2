@@ -1,6 +1,6 @@
 const { authenticated, authorized } = require("./auth");
 const NEW_POST = "NEW_POST";
-const { PubSub } = require("apollo-server");
+const { PubSub, AuthenticationError } = require("apollo-server");
 
 const pubsub = new PubSub();
 /**
@@ -59,7 +59,7 @@ module.exports = {
       const existing = models.User.findOne({ email: input.email });
 
       if (existing) {
-        throw new Error("nope");
+        throw new AuthenticationError("Nope");
       }
       const user = models.User.createOne({
         ...input,
@@ -73,7 +73,7 @@ module.exports = {
       const user = models.User.findOne(input);
 
       if (!user) {
-        throw new Error("nope");
+        throw new AuthenticationError("nope");
       }
 
       const token = createToken(user);
@@ -90,7 +90,7 @@ module.exports = {
   User: {
     posts(root, _, { user, models }) {
       if (root.id !== user.id) {
-        throw new Error("nope");
+        throw new AuthenticationError("nope");
       }
 
       return models.Post.findMany({ author: root.id });
