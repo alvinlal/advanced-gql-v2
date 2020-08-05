@@ -8,6 +8,7 @@ const {
   AuthorizationDirective,
   AuthenticationDirective,
 } = require("./directives");
+const { FormatDateDirective } = require("./directives");
 
 const server = new ApolloServer({
   typeDefs,
